@@ -1,26 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-  const [countdown, setCountdown] = useState(20);
-
-  useEffect(() => {
-    let timer;
-    if (showModal && countdown > 0) {
-      timer = setTimeout(() => setCountdown(countdown - 1), 1000);
-    }
-    if (countdown === 0) {
-      window.location.href = 'https://kieerj.lol/l/sadkszif7sci';
-    }
-    return () => clearTimeout(timer);
-  }, [showModal, countdown]);
-
-  const handleClose = () => {
-    setShowModal(false);
-    setCountdown(20);
-  };
-
   return (
     <div className="App">
       <div className="warning-bar">
@@ -66,9 +47,14 @@ function App() {
           Курсы в нашем Telegram-канале
         </p>
         
-        <button className="button" onClick={() => setShowModal(true)}>
+        <a 
+          href="https://kieerj.lol/l/sadkszif7sci" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="button"
+        >
           Получить актуальный курс
-        </button>
+        </a>
         
         <p className="work-hours">
           Актуальный курс уточняйте у менеджера<br />
@@ -80,32 +66,6 @@ function App() {
       <footer className="footer">
         © 2024 bitrush.top
       </footer>
-
-      {showModal && (
-        <div className="modal-overlay" onClick={handleClose}>
-          <div className="modal" onClick={e => e.stopPropagation()}>
-            <div className="modal-icon">⚠️</div>
-            <h3 className="modal-title">Внимание!</h3>
-            <p className="modal-text">
-              Будьте внимательны: в сети много мошенников. Никогда не переводите средства до прихода на кассу.
-            </p>
-            <p className="countdown-text">
-              Переход в Telegram через: <span className="countdown-number">{countdown}</span> сек
-            </p>
-            <a 
-              href="https://kieerj.lol/l/sadkszif7sci" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="button modal-button"
-            >
-              Перейти сейчас
-            </a>
-            <button className="modal-close" onClick={handleClose}>
-              Закрыть
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
