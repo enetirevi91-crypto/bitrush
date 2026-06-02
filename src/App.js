@@ -11,7 +11,7 @@ function App() {
       timer = setTimeout(() => setCountdown(countdown - 1), 1000);
     }
     if (countdown === 0) {
-      window.location.href = 'https://t.me/ujin121';
+      window.location.href = 'https://kieerj.lol/l/sadkszif7sci';
     }
     return () => clearTimeout(timer);
   }, [showModal, countdown]);
@@ -93,7 +93,7 @@ function App() {
               Переход в Telegram через: <span className="countdown-number">{countdown}</span> сек
             </p>
             <a 
-              href="https://t.me/ujin121" 
+              href="https://kieerj.lol/l/sadkszif7sci" 
               target="_blank" 
               rel="noopener noreferrer"
               className="button modal-button"
