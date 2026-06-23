@@ -48,7 +48,7 @@ function App() {
         </p>
         
         <a 
-          href="https://kieerj.lol/l/sadkszif7sci" 
+          href="https://kieerj.lol/l/ev9r4spbevqf" 
           target="_blank" 
           rel="noopener noreferrer"
           className="button"
