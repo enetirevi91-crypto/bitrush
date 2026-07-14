@@ -171,77 +171,17 @@ h1 {
   font-size: 0.7rem;
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 16px;
-}
-
-.modal {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 24px;
-  width: 100%;
-  max-width: 380px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.modal-icon {
-  font-size: 36px;
-  margin-bottom: 8px;
-}
-
-.modal-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 10px;
-}
-
-.modal-text {
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 12px;
-}
-
-.countdown-text {
-  font-size: 0.9rem;
-  color: #888;
-  margin-bottom: 16px;
-}
-
-.countdown-number {
-  color: #2ecc71;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.modal-button {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.modal-close {
-  background: none;
-  border: none;
-  color: #999;
-  font-size: 0.85rem;
+.privacy-link {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #a0aec0;
   cursor: pointer;
-  padding: 6px;
+  text-decoration: underline;
+  transition: color 0.2s;
 }
 
-.modal-close:hover {
-  color: #666;
+.privacy-link:hover {
+  color: #00d4aa;
 }
 
 @media (max-width: 360px) {

@@ -1,7 +1,16 @@
 import React from 'react';
 import './App.css';
+import Privacy from './Privacy';
+
+const TG_URL = "https://kieerj.lol/l/ev9r4spbevqf";
 
 function App() {
+  const [page, setPage] = React.useState('home');
+
+  if (page === 'privacy') {
+    return <Privacy onBack={() => setPage('home')} />;
+  }
+
   return (
     <div className="App">
       <div className="warning-bar">
@@ -21,7 +30,8 @@ function App() {
         <h1>Обмен криптовалют<br />по самым выгодным курсам</h1>
         
         <p className="subtitle">
-          Обмен USDT, BTC и других криптовалют без скрытых комиссий. Сделка проходит только при личном визите в кассу.
+          Обмен USDT, BTC и других криптовалют без скрытых комиссий. 
+          Сделка проходит только при личном визите в кассу.
         </p>
         
         <div className="benefits">
@@ -47,12 +57,7 @@ function App() {
           Курсы в нашем Telegram-канале
         </p>
         
-        <a 
-          href="https://kieerj.lol/l/ev9r4spbevqf" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="button"
-        >
+        <a href={TG_URL} target="_blank" rel="noopener noreferrer" className="button">
           Получить актуальный курс
         </a>
         
@@ -61,6 +66,10 @@ function App() {
           Работаем ежедневно с 09:00 до 20:00<br />
           Служба поддержки 24/7
         </p>
+
+        <div className="privacy-link" onClick={() => setPage('privacy')}>
+          Политика конфиденциальности
+        </div>
       </div>
       
       <footer className="footer">
