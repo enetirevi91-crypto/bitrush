@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Privacy.css';
 
-function Privacy({ onBack }) {
+function Privacy() {
   return (
     <div className="privacy-page">
       <div className="privacy-container">
-        <button className="back-btn" onClick={onBack}>← На главную</button>
+        <Link to="/" className="back-btn">← На главную</Link>
         
         <h1>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h1>
         <p className="update-date">Дата последнего обновления: 15 июля 2026 г.</p>

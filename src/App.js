@@ -1,16 +1,11 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Privacy from './Privacy';
 
 const TG_URL = "https://kieerj.lol/l/ev9r4spbevqf";
 
-function App() {
-  const [page, setPage] = React.useState('home');
-
-  if (page === 'privacy') {
-    return <Privacy onBack={() => setPage('home')} />;
-  }
-
+function Home() {
   return (
     <div className="App">
       <div className="warning-bar">
@@ -67,15 +62,26 @@ function App() {
           Служба поддержки 24/7
         </p>
 
-        <div className="privacy-link" onClick={() => setPage('privacy')}>
+        <Link to="/privacy" className="privacy-link">
           Политика конфиденциальности
-        </div>
+        </Link>
       </div>
       
       <footer className="footer">
         © 2024 bitrush.top
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy" element={<Privacy />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
