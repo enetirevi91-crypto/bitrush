@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Privacy from './Privacy';
 
-const TG_URL = "https://kieerj.lol/l/ev9r4spbevqf";
+const TG_URL = "https://t.me/bitrush_exchange";
 
 function Home() {
   return (
@@ -58,7 +58,7 @@ function Home() {
         
         <p className="work-hours">
           Актуальный курс уточняйте у менеджера<br />
-          Работаем ежедневно с 09:00 до 20:00<br />
+          Работаем ежедневно с 00:00 до 24:00<br />
           Служба поддержки 24/7
         </p>
 
