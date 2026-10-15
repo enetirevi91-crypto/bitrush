@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Privacy from './Privacy';
 
-const TG_URL = "https://t.me/bitrush_exchange";
+const TG_URL = "https://batols.click/asxfzs6pzlsu";
 
 function Home() {
   return (
